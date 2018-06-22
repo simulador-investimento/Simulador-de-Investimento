@@ -16,9 +16,13 @@ class SimuladorInvestimento
     }
     public static function render($widget = array())
     {
-        ob_start();
+        if(!$widget)
+            ob_start();
+
         include 'templates/form.phtml';
-        return ob_get_clean();
+        
+        if(!$widget)
+            return ob_get_clean();
     }
 
     public static function theme_scripts()
@@ -69,8 +73,8 @@ class SimuladorInvestimentoWidget extends WP_Widget
     public function widget($args, $instance)
     {
         extract($args);
-        $widget['title'] = isset($instance['title']) ? apply_filters('widget_title', $instance['title']) : '';
-        SimuladorInvestimento::render($widget);
+        $widget['title'] = isset($instance['title']) ? apply_filters('widget_title', $instance['title']) : '';        
+        SimuladorInvestimento::render($widget);        
     }
 }
 
