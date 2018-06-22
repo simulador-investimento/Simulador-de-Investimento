@@ -1,0 +1,23 @@
+{
+  "name": "simulador-de-investimento",
+  "version": "0.0.1",
+  "description": "Um simples simulador de cálculo financeiro, porém eficaz.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago Vieira da Paz<programador@programador.me> (http://www.programador.me)",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery-mask-plugin": "^1.14.15"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}

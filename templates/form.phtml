@@ -1,0 +1,79 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <?php
+            if(isset($widget['title'])) {
+                echo "<h3 class='row widget-title'>{$widget['title']}</h3>";
+            }
+            else{
+                echo '<h2 class="row">Simulador de Investimento</h2>';
+            }
+        ?>     
+        <form class="form-horizontal financial-simulator-form" autocomplete="off">
+            <div class="form-group">
+                <label class="control-label">Valor inicial aplicado:</label>
+                <div class="input-group">
+                    <span class="input-group-addon">R$</span>
+                    <input required type="text" name="initial_value_applied" class="form-control money initial_value_applied" placeholder="R$ 1.000,00">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Rendimento estimado:</label>
+                <div class="input-group">
+                    <input required type="number" step="0.01" name="estimated_yield" class="form-control estimated_yield" placeholder="0,65%">
+                    <span class="input-group-addon">%</span>
+                </div>                
+            </div>
+            <div class="form-group">
+                <label class="control-label">Tempo(meses):</label>
+                <div class="input-group">
+                    <input type="number" name="time" class="form-control time" placeholder="180">  
+                    <span class="input-group-addon">meses</span>    
+                </div>         
+            </div>
+            <div class="form-group">
+                <label class="control-label">Aplicações mensais:</label>
+                <div class="input-group">
+                    <span class="input-group-addon">R$</span>
+                    <input required type="text" name="monthly_application" class="form-control money monthly_application" placeholder="R$ 250,00">
+                </div>
+            </div>  
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Calcular</button> 
+                <button type="button" class="btn btn-danger _clear">Limpar</button> 
+            </div> 
+            <div id="_result" class="row hidden">
+                <table class="table table-responsive table-bordered table-hover">
+                    <thead>
+                        <tr class="bg-primary">
+                            <th class="text-center">Acumulado</th>                                     
+                        </tr>
+                        <tr>
+                            <td class="text-center">R$ <span id="_accumulated"></span></td>
+                        </tr>
+                        <tr class="bg-primary">
+                            <th class="text-center">Total investido</th>                    
+                        </tr>
+                        <tr>
+                            <td class="text-center">R$ <span id="_total_amount"></span></td>
+                        </tr>
+                        <tr class="bg-primary">
+                            <th class="text-center">Juros total</th>                    
+                        </tr>
+                        <tr>
+                            <td class="text-center">R$ <span id="_interest"></span></td>
+                        </tr>
+                        <tr class="bg-primary">
+                            <th class="text-center">Rendimento mensal estimado</th>                    
+                        </tr>
+                        <tr>
+                            <td class="text-center">R$ <span id="_estimated_monthly_income"></span></td>
+                        </tr>
+                    </thead>
+                </table> 
+            </div>         
+        </form>        
+        <div class="row">
+            <p>Desenvolvido por <a  class='text-muted' href="https://simuladorinvestimento.com.br/" target="_blank">Simulador de Investimento</a></p>
+        </div> 
+    </div>
+</div>
