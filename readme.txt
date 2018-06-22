@@ -1,7 +1,7 @@
 === Simulador de Investimento ===
 Contributors: simulador2018
 Donate link: https://simuladorinvestimento.com.br/
-Tags: Investment, Calc, Simulador
+Tags: Simulador de investimento, Simulador de finanças, Financeiro
 Requires at least: 4.6
 Tested up to: 4.7
 Stable tag: 4.3
@@ -29,8 +29,13 @@ Vá até widgets e adicione o widget "Simulador de Investimento" nas posições 
 Forneça os valores e envie o formulário para visualizar a simulação.
 
 == Screenshots ==
-1. Screenshot1
+1. screenshot1
+2. screenshot2
+3. screenshot3
+4. screenshot4
 
 == Changelog ==
 = 0.0.1 =
 * Initial beta release.
+= 1.0.0 =
+* Initial release
