@@ -15,8 +15,10 @@ class SimuladorInvestimento
         add_action('wp_enqueue_scripts', array('SimuladorInvestimento', 'theme_scripts'));
     }
     public static function render($widget = array())
-    {        
+    {
+        ob_start();
         include 'templates/form.phtml';
+        return ob_get_clean();
     }
 
     public static function theme_scripts()
