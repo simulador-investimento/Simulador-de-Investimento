@@ -31,6 +31,9 @@ class SimuladorInvestimento
         wp_register_script('simulador-de-investimento-bootstrap', plugins_url('/dist/js/bootstrap.min.js', __FILE__), array('jquery'), '', true);
         wp_register_script('simulador-de-investimento-mask', plugins_url('/dist/js/jquery.mask.min.js', __FILE__), array('jquery'), '', true);
         wp_register_script('simulador-de-investimento-script', plugins_url('/dist/js/script.js', __FILE__), array('jquery'), '', true);
+        wp_register_script('google-chart', 'https://www.gstatic.com/charts/loader.js', array(),false);
+
+        wp_enqueue_script('google-chart');
         wp_enqueue_script('simulador-de-investimento-bootstrap');
         wp_enqueue_script('simulador-de-investimento-mask');
         wp_enqueue_script('simulador-de-investimento-script');
